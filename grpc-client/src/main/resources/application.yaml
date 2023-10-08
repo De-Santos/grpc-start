@@ -1,0 +1,6 @@
+grpc:
+  server:
+    port: 9092
+
+logging:
+  config: classpath:\log\logback-config.xml
