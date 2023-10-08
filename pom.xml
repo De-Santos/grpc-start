@@ -26,6 +26,8 @@
 
     <modules>
         <module>grpc-server</module>
+        <module>grpc-common</module>
+        <module>grpc-client</module>
     </modules>
 
     <dependencies>

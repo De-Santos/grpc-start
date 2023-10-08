@@ -26,6 +26,12 @@
             <version>${grpc.version}</version>
         </dependency>
 
+        <dependency>
+            <groupId>com.grpc</groupId>
+            <artifactId>grpc-common</artifactId>
+            <version>0.0.1</version>
+        </dependency>
+
     </dependencies>
 
     <build>
