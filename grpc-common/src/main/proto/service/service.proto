@@ -1,0 +1,11 @@
+syntax = "proto3";
+import "dto/dto.proto";
+
+package com.grpc;
+
+option java_multiple_files = true;
+option java_package = "com.grpc";
+
+service TestService {
+  rpc getHello(EmptyRequest) returns (HelloResponse);
+}
