@@ -1,5 +1,6 @@
 package com.grpc.server.service;
 
+import com.google.protobuf.Empty;
 import com.grpc.Dto;
 import com.grpc.TestServiceGrpc;
 import io.grpc.stub.StreamObserver;
@@ -11,10 +12,10 @@ import net.devh.boot.grpc.server.service.GrpcService;
 public class GHelloService extends TestServiceGrpc.TestServiceImplBase {
 
 	@Override
-	public void getHello(Dto.EmptyRequest request, StreamObserver<Dto.HelloResponse> responseObserver) {
+	public void getHello(Empty request, StreamObserver<Dto.HelloResponse> responseObserver) {
 		log.info("Received Message with hash code: {}", request.hashCode());
 		Dto.HelloResponse response = Dto.HelloResponse.newBuilder()
-				.setMessage("Hello From Server. ")
+				.setMessage("Hello From Server.")
 				.build();
 
 		responseObserver.onNext(response);

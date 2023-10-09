@@ -1,6 +1,13 @@
+server:
+  port: 8088
+
 grpc:
   server:
     port: 9092
+  client:
+    grpc-server:
+      address: static://localhost:9091
+      negotiation-type: plaintext
 
 logging:
   config: classpath:\log\logback-config.xml
